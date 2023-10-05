@@ -1,0 +1,401 @@
+@charset "UTF-8";
+/* reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+textarea,
+p,
+blockquote,
+th,
+td,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+fieldset,
+img {
+  border: 0 none;
+}
+
+dl,
+ul,
+ol,
+menu,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 100%;
+  vertical-align: middle;
+}
+
+button {
+  font-size: 100%;
+  vertical-align: middle;
+  border: 0 none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* 뷰표트 변환시 폰트크기 자동확대 방지 */
+input[type=text], input[type=password], input[type=submit], input[type=search] {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+input:checked[type=checkbox] {
+  background-color: #666;
+  -webkit-appearance: checkbox;
+}
+
+button {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+
+input[type=button], input[type=submit], input[type=reset], input[type=file] {
+  -webkit-appearance: button;
+  border-radius: 0;
+}
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* 기본 폰트 설정 */
+/* mobile */
+body {
+  background: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #231816;
+}
+
+/* desktop */
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+}
+/* color값은 디자인가이드에 맞게사용 */
+a {
+  color: #333;
+  text-decoration: none;
+}
+a:active, a:hover {
+  text-decoration: none;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+hr {
+  display: none;
+}
+
+input[type=password] {
+  font-family: "Malgun Gothic";
+}
+
+/* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
+/* skipnavigation */
+#u-skip {
+  position: relative;
+  z-index: 3000;
+}
+#u-skip a {
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  padding: 7px 10px 5px;
+  background: rgb(35, 24, 22);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+}
+#u-skip a:focus {
+  top: 0;
+  opacity: 1;
+  z-index: 1000;
+}
+
+/* 이미지 스프라이트 */
+.img-g {
+  display: inline-block;
+  overflow: hidden;
+  background: url(../../images/comm/img-comm.png) no-repeat;
+  vertical-align: top;
+}
+
+/* 이미지 */
+/* global */
+.ir-pm {
+  display: block;
+  overflow: hidden;
+  font-size: 0px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir-wa {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+}
+
+/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.blind,
+caption,
+legend {
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.f_l {
+  float: left;
+}
+
+.f_r {
+  float: right;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.tbl {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 테이블 초기화 */
+.clearfix {
+  display: block;
+  overflow: visible;
+  width: auto;
+  clear: both;
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+  clear: both;
+  content: "";
+}
+
+:root {
+  --sm: 768px;
+  --md: 992px;
+  --lg: 1200px;
+  --bs-primary: rgb(35, 24, 22);
+  --bs-primary-rgb: 35, 24, 22;
+}
+
+.sec-g {
+  padding: 100px 0;
+}
+
+.wrap {
+  margin: 0;
+  padding-top: 901px;
+}
+
+#header {
+  padding: 0 30px;
+  position: relative;
+}
+
+.logo h1 {
+  position: absolute;
+  top: 17px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.fixed-top {
+  padding: 0;
+}
+
+.navbar-nav li {
+  color: rgb(35, 24, 22);
+  padding: 12px 30px;
+  font-size: 26px;
+  position: relative;
+}
+.navbar-nav li .nav-link {
+  color: #231816;
+  padding: 0;
+  transition: 0.3s color ease-in-out;
+  position: relative;
+  z-index: 100;
+}
+.navbar-nav li .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 7px;
+  height: 2px;
+  width: 0;
+  width: 0;
+  background-color: #231816;
+  transition: 0.4s width ease-in-out, 0.3s background-color ease-in-out;
+}
+
+.navbar-nav > li > a.active:after,
+.navbar-nav > li:hover > a:after {
+  width: calc(100% - 13px);
+}
+
+.artist {
+  position: absolute;
+  top: 43px;
+  left: 5px;
+  padding: 0 30px;
+}
+.artist .artist-name {
+  font-size: 26px;
+}
+.artist .artist-name::before {
+  color: #231816;
+  content: "\f061";
+  font-weight: 900;
+  font-family: "Line Awesome Free";
+}
+
+#artist-page {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+}
+#artist-page .artist-wrap img {
+  width: 100%;
+  height: auto;
+  -o-object-position: bottom;
+     object-position: bottom;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#artist-page .artist-wrap .main-actor-name {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 23%;
+  text-align: center;
+  text-transform: uppercase;
+}
+#artist-page .artist-wrap .main-actor-name .name-k {
+  font-size: 46px;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+#artist-page .artist-wrap .main-actor-name .name-e {
+  font-size: 50px;
+  font-weight: 400;
+}
+
+#jumbotron {
+  position: relative;
+  z-index: 1000;
+}
+#jumbotron .inner {
+  width: 100%;
+  max-width: 1200px;
+}
+#jumbotron .intro-wrap {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  margin-bottom: 57px;
+}
+.artist-content .section-intro {
+  background-color: #231816;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0 80px;
+}
+
+#contact {
+  height: 500px;
+  color: rgb(35, 24, 22);
+}/*# sourceMappingURL=comm.css.map */

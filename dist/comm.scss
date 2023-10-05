@@ -1,0 +1,154 @@
+@charset "UTF-8";
+@import "reset";
+
+:root {
+  --sm: 768px;
+  --md: 992px;
+  --lg: 1200px;
+
+  --bs-primary: rgb(35, 24, 22);
+  --bs-primary-rgb: 35, 24, 22;
+}
+
+$md: 768px;
+
+.sec-g {
+  padding: 100px 0;
+}
+// .inner {
+//   padding: 20px;
+// }
+.wrap {
+  margin: 0;
+  // padding-top: 91px;
+  padding-top: 901px;
+}
+
+#header {
+  // height: 70px;
+  padding: 0 30px;
+  position: relative;
+}
+.logo {
+  h1 {
+    position: absolute;
+    top: 17px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+}
+.container-fluid {
+  padding: 0;
+}
+.fixed-top {
+  padding: 0;
+}
+.navbar-nav li {
+  color: rgb(35, 24, 22);
+  padding: 12px 30px;
+  font-size: 26px;
+  position: relative;
+
+  .nav-link {
+    color: #231816;
+    padding: 0;
+    transition: 0.3s color ease-in-out;
+    position: relative;
+    z-index: 100;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 7px;
+      height: 2px;
+      width: 0;
+      width: 0;
+      background-color: #231816;
+      transition: 0.4s width ease-in-out, 0.3s background-color ease-in-out;
+    }
+  }
+}
+
+.navbar-nav > li > a.active:after,
+.navbar-nav > li:hover > a:after {
+  width: calc(100% - 13px);
+}
+.artist {
+  position: absolute;
+  top: 43px;
+  left: 5px;
+  padding: 0 30px;
+  .artist-name {
+    font-size: 26px;
+    &::before {
+      color: #231816;
+      content: "\f061";
+      font-weight: 900;
+      font-family: "Line Awesome Free";
+    }
+  }
+}
+#artist-page {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+  .artist-wrap {
+    img {
+      width: 100%;
+      height: auto;
+      object-position: bottom;
+      object-fit: contain;
+    }
+    .main-actor-name {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 23%;
+      text-align: center;
+      text-transform: uppercase;
+      .name-k {
+        font-size: 46px;
+        font-weight: 500;
+        margin-bottom: 3px;
+      }
+      .name-e {
+        font-size: 50px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+#jumbotron {
+  position: relative;
+  z-index: 1000;
+  // height: 50vh;
+  .inner {
+    width: 100%;
+    max-width: 1200px;
+  }
+  .intro-wrap {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    margin-bottom: 57px;
+    .introduction {
+    }
+  }
+}
+.artist-content {
+  .section-intro {
+    background-color: #231816;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 80px;
+  }
+}
+#contact {
+  height: 500px;
+  color: rgb(35, 24, 22);
+}

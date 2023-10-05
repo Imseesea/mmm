@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="페이지 제목" />
+    <meta property="og:description" content="페이지 설명" />
+    <meta
+      property="og:image"
+      content="http://www.mysite.com/article/article1_featured_image.jpg"
+    />
+    <meta
+      property="og:url"
+      content="http://www.mysite.com/article/article1.html"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="페이지 제목" />
+    <meta name="twitter:description" content="페이지 설명" />
+    <meta
+      name="twitter:image"
+      content="http://www.mysite.com/article/article1.html"
+    />
+    <meta name="twitter:domain" content="사이트 명" />
+    <title>Onepage</title>
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/comm.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="./dist/comm.js" defer></script>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <div class="wrap">
+      <header id="header" class="bg-light">
+        <div class="logo fixed-top">
+          <h1>
+            <a class="navbar-brand" href="#"
+              ><img src="./images/logo_black.png" alt=""
+            /></a>
+          </h1>
+        </div>
+        <nav class="navbar navbar-expand-sm fixed-top">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsibleNavbar"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-between"
+              id="collapsibleNavbar"
+            >
+              <ul class="navbar-nav menu-left">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#ARTIST">ARTIST</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#COMPANY">COMPANY</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav menu-left">
+                <li class="nav-item">
+                  <a class="nav-link" href="#PR CENTER">PR CENTER</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#AUDITION">AUDITION</a>
+                </li>
+              </ul>
+              <div class="artist">
+                <div>
+                  <span class="artist-name"> Kim Tae Ri</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <section id="artist-page">
+        <div class="artist-wrap fixed-top">
+          <img src="./images/main01.jpg" alt="" />
+          <div class="main-actor-name">
+            <h1 class="name-k">김태리</h1>
+            <h1 class="name-e">KIM TAE RI</h1>
+          </div>
+        </div>
+      </section>
+      <section id="jumbotron" class="p-5 bg-primary text-white">
+        <div class="container artist-content">
+          <div class="section-intro">
+            <div class="inner">
+              <div class="intro-wrap">
+                <div class="introduction">
+                  <h3>Introduction</h3>
+                  <span class="name"></span>
+                  <span class="date"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h1 data-aos="fade-in">odada는 해외여행 가고 싶어.</h1>
+          <p data-aos="fade-in">Lorem ipsum...</p>
+        </div>
+      </section>
+
+      <section id="about" class="sec-g">
+        <div class="container">
+          <div class="title d-flex justify-content-center mb-5">
+            <h2>about</h2>
+          </div>
+          <div class="row">
+            <!-- sm : 768px 기준 -->
+            <div class="col-sm-8">
+              <h2
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+                data-aos-easing="ease-in-out"
+                data-aos-mirror="true"
+                data-aos-once="false"
+                data-aos-anchor-placement="top-center"
+              >
+                제목
+              </h2>
+              <p data-aos="fade-in">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                tempore veniam dolore consequuntur. Alias, praesentium magnam!
+                Necessitatibus iste, fugit autem minima consequuntur sed, harum
+                earum sint rerum quibusdam, culpa nobis.
+              </p>
+            </div>
+            <div class="col-sm-4">
+              <span class="glyphicon glyphicon-qrcode"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="service" class="bg-light sec-g">
+        <div class="container">
+          <div class="title d-flex justify-content-center mb-5">
+            <h2>service</h2>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <h3>제목</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                tempore veniam dolore consequuntur. Alias, praesentium magnam!
+                Necessitatibus iste, fugit autem minima consequuntur sed, harum
+                earum sint rerum quibusdam, culpa nobis.
+              </p>
+            </div>
+            <div class="col-sm-4">
+              <h3>제목</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                tempore veniam dolore consequuntur. Alias, praesentium magnam!
+                Necessitatibus iste, fugit autem minima consequuntur sed, harum
+                earum sint rerum quibusdam, culpa nobis.
+              </p>
+            </div>
+            <div class="col-sm-4">
+              <h3>제목</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias
+                tempore veniam dolore consequuntur. Alias, praesentium magnam!
+                Necessitatibus iste, fugit autem minima consequuntur sed, harum
+                earum sint rerum quibusdam, culpa nobis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="sec-g">
+        <div class="container">
+          <div class="title d-flex justify-content-center mb-5">
+            <h2>portfolio</h2>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="https://via.placeholder.com/350x150" alt="" />
+            </div>
+            <div class="col-sm-4">
+              <img src="https://via.placeholder.com/350x150" alt="" />
+            </div>
+            <div class="col-sm-4">
+              <img src="https://via.placeholder.com/350x150" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-light sec-g">
+        <div class="container">ddddd</div>
+      </section>
+
+      <footer id="footer">
+        <div class="container">footer</div>
+      </footer>
+    </div>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
