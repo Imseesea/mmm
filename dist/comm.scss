@@ -6,14 +6,19 @@
   --md: 992px;
   --lg: 1200px;
 
-  --bs-primary: rgb(35, 24, 22);
-  --bs-primary-rgb: 35, 24, 22;
+  // --bs-primary: rgb(35, 24, 22);
+  // --bs-primary-rgb: 35, 24, 22;
 }
 
 $md: 768px;
 
 .sec-g {
   padding: 100px 0;
+}
+.inner {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
 }
 // .inner {
 //   padding: 20px;
@@ -38,6 +43,9 @@ $md: 768px;
     bottom: 0;
     display: flex;
     justify-content: center;
+    img {
+      filter: grayscale(100%);
+    }
   }
 }
 .container-fluid {
@@ -47,13 +55,14 @@ $md: 768px;
   padding: 0;
 }
 .navbar-nav li {
-  color: rgb(35, 24, 22);
+  // color: rgb(35, 24, 22);
+  color: #f2f2f2;
   padding: 12px 30px;
   font-size: 26px;
   position: relative;
 
   .nav-link {
-    color: #231816;
+    color: #f2f2f2;
     padding: 0;
     transition: 0.3s color ease-in-out;
     position: relative;
@@ -66,12 +75,14 @@ $md: 768px;
       height: 2px;
       width: 0;
       width: 0;
-      background-color: #231816;
+      background-color: #f2f2f2;
       transition: 0.4s width ease-in-out, 0.3s background-color ease-in-out;
     }
   }
 }
-
+.navbar-nav .nav-link.active {
+  color: #f2f2f2;
+}
 .navbar-nav > li > a.active:after,
 .navbar-nav > li:hover > a:after {
   width: calc(100% - 13px);
@@ -84,7 +95,7 @@ $md: 768px;
   .artist-name {
     font-size: 26px;
     &::before {
-      color: #231816;
+      color: #f2f2f2;
       content: "\f061";
       font-weight: 900;
       font-family: "Line Awesome Free";
@@ -102,6 +113,7 @@ $md: 768px;
       height: auto;
       object-position: bottom;
       object-fit: contain;
+      filter: grayscale(100%);
     }
     .main-actor-name {
       position: fixed;
@@ -110,10 +122,12 @@ $md: 768px;
       bottom: 23%;
       text-align: center;
       text-transform: uppercase;
+      text-shadow: 2px 2px 4px #000000;
       .name-k {
         font-size: 46px;
         font-weight: 500;
         margin-bottom: 3px;
+        color: white;
       }
       .name-e {
         font-size: 50px;
@@ -126,22 +140,56 @@ $md: 768px;
   position: relative;
   z-index: 1000;
   // height: 50vh;
-  .inner {
-    width: 100%;
-    max-width: 1200px;
+
+  .artist-content {
+    // margin-top: 99vh;
   }
+
   .intro-wrap {
     display: flex;
     justify-content: space-between;
     font-weight: 400;
     margin-bottom: 57px;
-    .introduction {
+    .intro {
+      h2 {
+        font-size: 50px;
+        font-weight: 400;
+        // margin: 0 0 10px -3px;
+        // min-width: 100%;
+      }
+      span {
+        font-size: 22px;
+        padding: 0 15px;
+      }
+      .name {
+        position: relative;
+        padding-left: 0;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 4px;
+          right: 0;
+          width: 2px;
+          height: 80%;
+          background-color: white;
+        }
+      }
     }
+  }
+  .introduction {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.81;
+    word-break: keep-all;
+    columns: 2;
+    column-gap: 40px;
   }
 }
 .artist-content {
   .section-intro {
-    background-color: #231816;
+    // background-color: #231816;
+    background-color: #000;
     color: white;
     display: flex;
     justify-content: center;
@@ -151,4 +199,37 @@ $md: 768px;
 #contact {
   height: 500px;
   color: rgb(35, 24, 22);
+}
+
+#photo {
+  position: relative;
+  z-index: 1000;
+
+  .act-img {
+    flex-grow: 1;
+    display: flex;
+    img {
+      width: 952px;
+      height: 952px;
+    }
+  }
+}
+#biography {
+  position: relative;
+  z-index: 1000;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0 150px;
+  color: #231816;
+  .bio-wrap {
+    h2 {
+      min-width: 100%;
+      font-size: 46px;
+      font-weight: 400;
+      margin: 0 0 90px;
+    }
+  }
+  .title {
+  }
 }
