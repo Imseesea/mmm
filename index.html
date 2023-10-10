@@ -52,7 +52,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="./dist/comm.js" defer></script>
   </head>
   <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
@@ -159,7 +159,72 @@
         <div class="inner">
           <div class="bio-wrap">
             <h2>Biography</h2>
-            <div class="list-wrap"></div>
+            <div class="list-wrap">
+              <div class="drama-wrap">
+                <h3 class="header-section">DRAMA</h3>
+
+                <div class="content-container">
+                  <div class="left-content">
+                    <img
+                      id="img1"
+                      class="imageToShow"
+                      src="./images/drama-01.jpg"
+                      alt="2023 SBS '악귀'"
+                    />
+                    <img
+                      id="img2"
+                      class="imageToShow"
+                      src="./images/drama-02.jpg"
+                      alt="2022 tvN '스물다섯 스물하나'"
+                    />
+                    <blockquote
+                      id="text1"
+                      class="textToShow"
+                      cite="https://www.youtube.com/watch?v=PKffm2uI4dk"
+                    >
+                      <p>
+                        Cat ipsum dolor sit amet, attack the child i show my
+                        fluffy belly but it's a trap!
+                      </p>
+                      <footer>
+                        — Fluffy, the kitten <cite>Sad Cat Diary</cite>
+                      </footer>
+                    </blockquote>
+                    <img
+                      id="img3"
+                      class="imageToShow"
+                      src="./images/drama-03.jpg"
+                      alt="2018 tvN '미스터 션샤인'"
+                    />
+                  </div>
+
+                  <div class="right-content">
+                    <p class="contentMarker" data-marker-content="img1">
+                      2023 SBS '악귀'
+                    </p>
+
+                    <p class="contentMarker" data-marker-content="img2">
+                      2022 tvN '스물다섯 스물하나'
+                    </p>
+
+                    <!-- <p class="contentMarker" data-marker-content="text1">
+                      Jump launch to pounce upon little yarn mouse, bare fangs
+                      at toy run hide in litter box until treats are fed chase
+                      laser or roll on the floor purring your whiskers off for
+                      pretend you want to go out but then don't play time.
+                      Munch, munch, chomp, chomp pooping rainbow while flying in
+                      a toasted bread costume in space you call this cat food
+                      sleep on my human's head but meow to be let in rub face on
+                      owner.
+                    </p> -->
+
+                    <p class="contentMarker" data-marker-content="img3">
+                      2018 tvN '미스터 션샤인'
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
