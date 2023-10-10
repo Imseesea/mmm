@@ -23,92 +23,60 @@
 //     }
 //   }, 300)
 // );
-console.clear();
 
-gsap.defaults({ overwrite: "auto" });
-
-gsap.set(".left-content > *", { xPercent: -50, yPercent: -50 });
-
-// Set up our scroll trigger
-const ST = ScrollTrigger.create({
-  trigger: ".content-container",
-  start: "top top",
-  end: "bottom bottom",
-  onUpdate: getCurrentSection,
-  pin: ".left-content",
+ScrollTrigger.defaults({
+  markers: false,
 });
 
-const contentMarkers = gsap.utils.toArray(".contentMarker");
+var points = gsap.utils.toArray(".point");
+var indicators = gsap.utils.toArray(".indicator");
 
-// Set up our content behaviors
-contentMarkers.forEach((marker) => {
-  marker.content = document.querySelector(`#${marker.dataset.markerContent}`);
+var height = 100 * points.length;
 
-  if (marker.content.tagName === "IMG") {
-    gsap.set(marker.content, { transformOrigin: "center" });
+gsap.set(".indicators", { display: "flex" });
 
-    marker.content.enter = function () {
-      gsap.fromTo(
-        marker.content,
-        { autoAlpha: 0, rotateY: -30 },
-        { duration: 0.3, autoAlpha: 1, rotateY: 0 }
-      );
-    };
-  } else if (marker.content.tagName === "BLOCKQUOTE") {
-    gsap.set(marker.content, { transformOrigin: "left center" });
-
-    marker.content.enter = function () {
-      gsap.fromTo(
-        marker.content,
-        { autoAlpha: 0, rotateY: 50 },
-        { duration: 0.3, autoAlpha: 1, rotateY: 0 }
-      );
-    };
-  }
-
-  marker.content.leave = function () {
-    gsap.to(marker.content, { duration: 0.1, autoAlpha: 0 });
-  };
+var tl = gsap.timeline({
+  duration: points.length,
+  scrollTrigger: {
+    trigger: ".philosophie",
+    start: "top center",
+    end: "+=" + height + "%",
+    scrub: true,
+    id: "points",
+  },
 });
 
-// Handle the updated position
-let lastContent;
-function getCurrentSection() {
-  let newContent;
-  const currScroll = scrollY;
+var pinner = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".philosophie .scr-tr-wrap",
+    start: "top top",
+    end: "+=" + height + "%",
+    scrub: true,
+    pin: ".philosophie .scr-tr-wrap",
+    pinSpacing: true,
+    id: "pinning",
+    markers: true,
+  },
+});
 
-  // Find the current section
-  contentMarkers.forEach((marker) => {
-    if (currScroll > marker.offsetTop) {
-      newContent = marker.content;
-    }
-  });
+points.forEach(function (elem, i) {
+  gsap.set(elem, { position: "absolute", top: 0 });
 
-  // If the current section is different than that last, animate in
-  if (
-    newContent &&
-    (lastContent == null || !newContent.isSameNode(lastContent))
-  ) {
-    // Fade out last section
-    if (lastContent) {
-      lastContent.leave();
-    }
+  tl.to(indicators[i], { backgroundColor: "orange", duration: 0.25 }, i);
+  tl.from(elem.querySelector("img"), { autoAlpha: 0 }, i);
+  tl.from(elem.querySelector("article"), { autoAlpha: 0, translateY: 100 }, i);
 
-    // Animate in new section
-    newContent.enter();
-
-    lastContent = newContent;
+  if (i != points.length - 1) {
+    tl.to(
+      indicators[i],
+      { backgroundColor: "#adadad", duration: 0.25 },
+      i + 0.75
+    );
+    tl.to(
+      elem.querySelector("article"),
+      { autoAlpha: 0, translateY: -100 },
+      i + 0.75
+    );
+    tl.to(elem.querySelector("img"), { autoAlpha: 0 }, i + 0.75);
   }
-}
-
-const media = window.matchMedia("screen and (max-width: 600px)");
-ScrollTrigger.addEventListener("refreshInit", checkSTState);
-checkSTState();
-
-function checkSTState() {
-  if (media.matches) {
-    ST.disable();
-  } else {
-    ST.enable();
-  }
-}
+});
