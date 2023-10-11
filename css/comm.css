@@ -281,6 +281,9 @@ legend {
   position: relative;
 }
 
+.logo {
+  mix-blend-mode: exclusion;
+}
 .logo h1 {
   position: absolute;
   top: 17px;
@@ -289,9 +292,6 @@ legend {
   bottom: 0;
   display: flex;
   justify-content: center;
-}
-.logo h1 img {
-  filter: grayscale(100%);
 }
 
 .container-fluid {
@@ -309,6 +309,7 @@ legend {
   position: relative;
 }
 .navbar-nav li .nav-link {
+  mix-blend-mode: exclusion;
   color: #f2f2f2;
   padding: 0;
   transition: 0.3s color ease-in-out;
@@ -374,7 +375,7 @@ legend {
   bottom: 23%;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px #0e0e0e;
 }
 #artist-page .artist-wrap .main-actor-name .name-k {
   font-size: 46px;

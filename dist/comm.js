@@ -80,3 +80,5 @@ points.forEach(function (elem, i) {
     tl.to(elem.querySelector("img"), { autoAlpha: 0 }, i + 0.75);
   }
 });
+
+// movie
