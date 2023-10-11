@@ -35,7 +35,7 @@ $md: 768px;
   position: relative;
 }
 .logo {
-  mix-blend-mode: exclusion;
+  // mix-blend-mode: exclusion;
   h1 {
     position: absolute;
     top: 17px;
@@ -190,9 +190,9 @@ $md: 768px;
 }
 .artist-content {
   .section-intro {
-    // background-color: #231816;
-    background-color: #000;
-    color: white;
+    background-color: #0e0e0e;
+    // background-color: #fff;
+    color: #f2f2f2;
     display: flex;
     justify-content: center;
     padding: 50px 0 80px;
@@ -210,20 +210,22 @@ $md: 768px;
   .act-img {
     flex-grow: 1;
     display: flex;
+    justify-content: space-between;
     img {
-      width: 952px;
-      height: 952px;
+      object-fit: contain;
+      width: 730px;
+      height: 870px;
     }
   }
 }
 #biography {
   position: relative;
   z-index: 1000;
-  background-color: #f2f2f2;
+  background-color: #0e0e0e;
   display: flex;
   justify-content: center;
   padding: 50px 0 150px;
-  color: #231816;
+  color: #f2f2f2;
   .bio-wrap {
     h2 {
       min-width: 100%;
@@ -256,7 +258,7 @@ $md: 768px;
   left: 2rem;
   top: 0;
   margin: 10vh 0;
-  height: 80vh;
+  height: 60vh;
   width: 3px;
   display: none;
   flex-direction: column;
@@ -283,7 +285,7 @@ $md: 768px;
   display: flex;
   align-items: center;
   padding: 4rem;
-  outline: 1px solid #231816;
+  // outline: 1px solid #f2f2f2;
 }
 
 .philosophie .scr-tr-wrap {
@@ -306,46 +308,114 @@ $md: 768px;
   height: auto;
 }
 
-.bio-others {
-  display: flex;
-  flex-wrap: wrap;
-  width: calc(100% + 17px);
-  transform: translateX(-15px);
+.award-wrap {
+  .awr-lst {
+    display: flex;
+    margin-bottom: 70px;
+  }
+  .awr-l-lst {
+    width: 50%;
+  }
+  .awr-r-lst {
+    width: 50%;
+  }
 }
-.bio-wrap {
-  .bio-lst {
-    min-width: 33.333%;
-    max-width: 50%;
-    margin-bottom: 70px;
-    padding: 0 17px;
-    flex-grow: 1;
-  }
-  .list-title {
-    font-size: 26px;
-    width: 100%;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #231816;
-  }
-  .bdn {
-    margin-bottom: 70px;
-    .list-title {
-      border-bottom: none;
-    }
+
+.bio-others {
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  // width: calc(100% + 17px);
+  // transform: translateX(-15px);
+  .bio-fl {
+    display: flex;
   }
   .list-item {
-    display: flex;
-    margin-bottom: 12px;
     justify-content: space-between;
-    .year {
-      display: inline-block;
-      font-size: 24px;
-      line-height: 1.3;
-      // min-width: 80px;
+  }
+}
+
+.bio-lst {
+  min-width: 33.333%;
+  max-width: 50%;
+  margin-bottom: 70px;
+  padding: 0 17px;
+  flex-grow: 1;
+}
+.list-title {
+  font-size: 26px;
+  width: 100%;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.bdn {
+  margin-bottom: 70px;
+  // .list-title {
+  //   border-bottom: none;
+  // }
+}
+.list-item {
+  display: flex;
+  margin-bottom: 12px;
+  .year {
+    display: inline-block;
+    font-size: 24px;
+    line-height: 1.3;
+    min-width: 80px;
+  }
+  .text {
+    font-size: 23px;
+    line-height: 1.3;
+  }
+}
+
+#footer {
+  height: 70px;
+  padding: 0 38px 12px;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  .logo-bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-menu {
+    ul {
+      display: flex;
+      align-items: flex-end;
     }
-    .text {
-      font-size: 23px;
-      line-height: 1.3;
+    li {
+      padding: 0 5px;
+      font-size: 20px;
+      &:last-child {
+        padding-right: 0;
+      }
+      a {
+        color: #f2f2f2;
+      }
+    }
+    .menu-lang {
+      position: relative;
+      height: auto;
+      padding: 0 0 0 15px !important;
+      display: block;
+      ::before {
+        content: "";
+        display: inline-block;
+        width: 2px;
+        height: 15px;
+        margin: -2px 15px 0 0;
+        background: #f2f2f2;
+        vertical-align: middle;
+      }
+      .active-lang {
+        cursor: pointer;
+      }
+      //
     }
   }
 }

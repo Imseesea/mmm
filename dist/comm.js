@@ -62,7 +62,7 @@ var pinner = gsap.timeline({
 points.forEach(function (elem, i) {
   gsap.set(elem, { position: "absolute", top: 0 });
 
-  tl.to(indicators[i], { backgroundColor: "orange", duration: 0.25 }, i);
+  tl.to(indicators[i], { backgroundColor: "black", duration: 0.25 }, i);
   tl.from(elem.querySelector("img"), { autoAlpha: 0 }, i);
   tl.from(elem.querySelector("article"), { autoAlpha: 0, translateY: 100 }, i);
 

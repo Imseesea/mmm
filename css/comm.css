@@ -281,9 +281,6 @@ legend {
   position: relative;
 }
 
-.logo {
-  mix-blend-mode: exclusion;
-}
 .logo h1 {
   position: absolute;
   top: 17px;
@@ -432,8 +429,8 @@ legend {
 }
 
 .artist-content .section-intro {
-  background-color: #000;
-  color: white;
+  background-color: #0e0e0e;
+  color: #f2f2f2;
   display: flex;
   justify-content: center;
   padding: 50px 0 80px;
@@ -451,20 +448,23 @@ legend {
 #photo .act-img {
   flex-grow: 1;
   display: flex;
+  justify-content: space-between;
 }
 #photo .act-img img {
-  width: 952px;
-  height: 952px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 730px;
+  height: 870px;
 }
 
 #biography {
   position: relative;
   z-index: 1000;
-  background-color: #f2f2f2;
+  background-color: #0e0e0e;
   display: flex;
   justify-content: center;
   padding: 50px 0 150px;
-  color: #231816;
+  color: #f2f2f2;
 }
 #biography .bio-wrap h2 {
   min-width: 100%;
@@ -495,7 +495,7 @@ legend {
   left: 2rem;
   top: 0;
   margin: 10vh 0;
-  height: 80vh;
+  height: 60vh;
   width: 3px;
   display: none;
   flex-direction: column;
@@ -516,7 +516,6 @@ legend {
   display: flex;
   align-items: center;
   padding: 4rem;
-  outline: 1px solid #231816;
 }
 
 .philosophie .scr-tr-wrap {
@@ -539,44 +538,102 @@ legend {
   height: auto;
 }
 
-.bio-others {
+.award-wrap .awr-lst {
   display: flex;
-  flex-wrap: wrap;
-  width: calc(100% + 17px);
-  transform: translateX(-15px);
+  margin-bottom: 70px;
+}
+.award-wrap .awr-l-lst {
+  width: 50%;
+}
+.award-wrap .awr-r-lst {
+  width: 50%;
 }
 
-.bio-wrap .bio-lst {
+.bio-others .bio-fl {
+  display: flex;
+}
+.bio-others .list-item {
+  justify-content: space-between;
+}
+
+.bio-lst {
   min-width: 33.333%;
   max-width: 50%;
   margin-bottom: 70px;
   padding: 0 17px;
   flex-grow: 1;
 }
-.bio-wrap .list-title {
+
+.list-title {
   font-size: 26px;
   width: 100%;
   padding-bottom: 15px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #231816;
+  border-bottom: 1px solid #f2f2f2;
 }
-.bio-wrap .bdn {
+
+.bdn {
   margin-bottom: 70px;
 }
-.bio-wrap .bdn .list-title {
-  border-bottom: none;
-}
-.bio-wrap .list-item {
+
+.list-item {
   display: flex;
   margin-bottom: 12px;
-  justify-content: space-between;
 }
-.bio-wrap .list-item .year {
+.list-item .year {
   display: inline-block;
   font-size: 24px;
   line-height: 1.3;
+  min-width: 80px;
 }
-.bio-wrap .list-item .text {
+.list-item .text {
   font-size: 23px;
   line-height: 1.3;
+}
+
+#footer {
+  height: 70px;
+  padding: 0 38px 12px;
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+#footer .logo-bt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .footer-menu ul {
+  display: flex;
+  align-items: flex-end;
+}
+#footer .footer-menu li {
+  padding: 0 5px;
+  font-size: 20px;
+}
+#footer .footer-menu li:last-child {
+  padding-right: 0;
+}
+#footer .footer-menu li a {
+  color: #f2f2f2;
+}
+#footer .footer-menu .menu-lang {
+  position: relative;
+  height: auto;
+  padding: 0 0 0 15px !important;
+  display: block;
+}
+#footer .footer-menu .menu-lang ::before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 15px;
+  margin: -2px 15px 0 0;
+  background: #f2f2f2;
+  vertical-align: middle;
+}
+#footer .footer-menu .menu-lang .active-lang {
+  cursor: pointer;
 }/*# sourceMappingURL=comm.css.map */
