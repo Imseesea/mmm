@@ -52,16 +52,18 @@ $md: 768px;
 .fixed-top {
   padding: 0;
 }
+
 .navbar-nav li {
   // color: rgb(35, 24, 22);
-  color: #f2f2f2;
+  // color: #f2f2f2;
+  color: #000;
   padding: 12px 30px;
   font-size: 26px;
   position: relative;
-
   .nav-link {
-    mix-blend-mode: exclusion;
-    color: #f2f2f2;
+    // color: #f2f2f2;
+    color: #000;
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
     padding: 0;
     transition: 0.3s color ease-in-out;
     position: relative;
@@ -74,13 +76,15 @@ $md: 768px;
       height: 2px;
       width: 0;
       width: 0;
-      background-color: #f2f2f2;
+      // background-color: #f2f2f2;
+      background: #000;
       transition: 0.4s width ease-in-out, 0.3s background-color ease-in-out;
     }
   }
 }
 .navbar-nav .nav-link.active {
-  color: #f2f2f2;
+  // color: #f2f2f2;
+  color: #000;
 }
 .navbar-nav > li > a.active:after,
 .navbar-nav > li:hover > a:after {
@@ -93,8 +97,12 @@ $md: 768px;
   padding: 0 30px;
   .artist-name {
     font-size: 26px;
+    color: #000;
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
+
     &::before {
-      color: #f2f2f2;
+      // color: #f2f2f2;
+      color: #000;
       content: "\f061";
       font-weight: 900;
       font-family: "Line Awesome Free";
@@ -113,7 +121,7 @@ $md: 768px;
       object-position: bottom;
       object-fit: contain;
 
-      filter: grayscale(100%);
+      // filter: grayscale(100%);
     }
     .main-actor-name {
       position: fixed;
@@ -122,14 +130,17 @@ $md: 768px;
       bottom: 23%;
       text-align: center;
       text-transform: uppercase;
-      text-shadow: 2px 2px 4px #0e0e0e;
+      // text-shadow: 2px 2px 4px #0e0e0e;
+      text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+      // text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.2);
+      color: #fff;
+
       // mix-blend-mode: exclusion;
 
       .name-k {
         font-size: 46px;
         font-weight: 500;
         margin-bottom: 3px;
-        color: white;
       }
       .name-e {
         font-size: 50px;
@@ -156,12 +167,13 @@ $md: 768px;
       h2 {
         font-size: 50px;
         font-weight: 400;
-        // margin: 0 0 10px -3px;
+        margin: 0 0 10px -3px;
         // min-width: 100%;
       }
       span {
         font-size: 22px;
         padding: 0 15px;
+        font-weight: 400;
       }
       .name {
         position: relative;
@@ -169,11 +181,11 @@ $md: 768px;
         &::after {
           content: "";
           position: absolute;
-          top: 4px;
+          top: 7px;
           right: 0;
           width: 2px;
-          height: 80%;
-          background-color: white;
+          height: 70%;
+          background-color: #0e0e0e;
         }
       }
     }
@@ -190,9 +202,10 @@ $md: 768px;
 }
 .artist-content {
   .section-intro {
-    background-color: #0e0e0e;
-    // background-color: #fff;
-    color: #f2f2f2;
+    // background-color: #0e0e0e;
+    background-color: #fff;
+    color: #0e0e0e;
+    // color: #f2f2f2;
     display: flex;
     justify-content: center;
     padding: 50px 0 80px;
@@ -206,26 +219,37 @@ $md: 768px;
 #photo {
   position: relative;
   z-index: 1000;
-
+  // height: 1140px;
+  h2 {
+    display: none;
+  }
   .act-img {
-    flex-grow: 1;
+    // flex-grow: 1;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    height: auto;
     img {
-      object-fit: contain;
-      width: 730px;
-      height: 870px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .act-sub {
+      overflow: hidden;
+      width: 50%;
+      height: 100%;
     }
   }
 }
 #biography {
   position: relative;
   z-index: 1000;
-  background-color: #0e0e0e;
+  background-color: #fff;
+  // background-color: #0e0e0e;
   display: flex;
   justify-content: center;
   padding: 50px 0 150px;
-  color: #f2f2f2;
+  color: #0e0e0e;
+  // color: #f2f2f2;
   .bio-wrap {
     h2 {
       min-width: 100%;
@@ -255,10 +279,11 @@ $md: 768px;
 }
 
 .indicators {
-  left: 2rem;
-  top: 0;
-  margin: 10vh 0;
-  height: 60vh;
+  left: 0;
+  top: 45%;
+  // top: 150px;
+  // margin: 10vh 0;
+  height: 10vh;
   width: 3px;
   display: none;
   flex-direction: column;
@@ -284,7 +309,7 @@ $md: 768px;
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 4rem;
+  // padding: 4rem;
   // outline: 1px solid #f2f2f2;
 }
 
@@ -294,18 +319,25 @@ $md: 768px;
 }
 
 .point article {
-  flex-basis: 60%;
-  margin-right: auto;
+  flex-basis: 30%;
+  // margin-right: auto;
+  // margin-left: auto;
+  margin: 0 auto;
   p {
+    margin-top: 25px;
     font-size: 23px;
     line-height: 1.3;
   }
 }
 
 .point img {
-  flex-basis: 25%;
-  max-width: 25vw;
-  height: auto;
+  flex-basis: 50%;
+  width: 100%;
+  height: 80vh;
+  // max-width: 30vw;
+  // flex-basis: 25%;
+  // max-width: 25vw;
+  // height: auto;
 }
 
 .award-wrap {
@@ -315,9 +347,18 @@ $md: 768px;
   }
   .awr-l-lst {
     width: 50%;
+    video {
+      width: 96%;
+      // width: 90%;
+      margin: 7px auto;
+    }
   }
   .awr-r-lst {
     width: 50%;
+    padding-left: 17px;
+    .list-item {
+      justify-content: space-between;
+    }
   }
 }
 
@@ -342,12 +383,19 @@ $md: 768px;
   padding: 0 17px;
   flex-grow: 1;
 }
+.bio-l {
+  padding-left: 0;
+}
+.bio-r {
+  padding-right: 0;
+}
 .list-title {
   font-size: 26px;
   width: 100%;
   padding-bottom: 15px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #0e0e0e;
+  // border-bottom: 1px solid #f2f2f2;
 }
 .bdn {
   margin-bottom: 70px;
@@ -374,7 +422,7 @@ $md: 768px;
   height: 70px;
   padding: 0 38px 12px;
   position: relative;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   align-items: baseline;
   justify-content: space-between;

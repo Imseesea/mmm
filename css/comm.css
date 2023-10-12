@@ -300,14 +300,14 @@ legend {
 }
 
 .navbar-nav li {
-  color: #f2f2f2;
+  color: #000;
   padding: 12px 30px;
   font-size: 26px;
   position: relative;
 }
 .navbar-nav li .nav-link {
-  mix-blend-mode: exclusion;
-  color: #f2f2f2;
+  color: #000;
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
   padding: 0;
   transition: 0.3s color ease-in-out;
   position: relative;
@@ -321,12 +321,12 @@ legend {
   height: 2px;
   width: 0;
   width: 0;
-  background-color: #f2f2f2;
+  background: #000;
   transition: 0.4s width ease-in-out, 0.3s background-color ease-in-out;
 }
 
 .navbar-nav .nav-link.active {
-  color: #f2f2f2;
+  color: #000;
 }
 
 .navbar-nav > li > a.active:after,
@@ -342,9 +342,11 @@ legend {
 }
 .artist .artist-name {
   font-size: 26px;
+  color: #000;
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2);
 }
 .artist .artist-name::before {
-  color: #f2f2f2;
+  color: #000;
   content: "\f061";
   font-weight: 900;
   font-family: "Line Awesome Free";
@@ -363,7 +365,6 @@ legend {
      object-position: bottom;
   -o-object-fit: contain;
      object-fit: contain;
-  filter: grayscale(100%);
 }
 #artist-page .artist-wrap .main-actor-name {
   position: fixed;
@@ -372,13 +373,13 @@ legend {
   bottom: 23%;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 2px 2px 4px #0e0e0e;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 #artist-page .artist-wrap .main-actor-name .name-k {
   font-size: 46px;
   font-weight: 500;
   margin-bottom: 3px;
-  color: white;
 }
 #artist-page .artist-wrap .main-actor-name .name-e {
   font-size: 50px;
@@ -398,10 +399,12 @@ legend {
 #jumbotron .intro-wrap .intro h2 {
   font-size: 50px;
   font-weight: 400;
+  margin: 0 0 10px -3px;
 }
 #jumbotron .intro-wrap .intro span {
   font-size: 22px;
   padding: 0 15px;
+  font-weight: 400;
 }
 #jumbotron .intro-wrap .intro .name {
   position: relative;
@@ -410,11 +413,11 @@ legend {
 #jumbotron .intro-wrap .intro .name::after {
   content: "";
   position: absolute;
-  top: 4px;
+  top: 7px;
   right: 0;
   width: 2px;
-  height: 80%;
-  background-color: white;
+  height: 70%;
+  background-color: #0e0e0e;
 }
 #jumbotron .introduction {
   display: inline-block;
@@ -429,8 +432,8 @@ legend {
 }
 
 .artist-content .section-intro {
-  background-color: #0e0e0e;
-  color: #f2f2f2;
+  background-color: #fff;
+  color: #0e0e0e;
   display: flex;
   justify-content: center;
   padding: 50px 0 80px;
@@ -445,26 +448,34 @@ legend {
   position: relative;
   z-index: 1000;
 }
+#photo h2 {
+  display: none;
+}
 #photo .act-img {
-  flex-grow: 1;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  height: auto;
 }
 #photo .act-img img {
-  -o-object-fit: contain;
-     object-fit: contain;
-  width: 730px;
-  height: 870px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+#photo .act-img .act-sub {
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
 }
 
 #biography {
   position: relative;
   z-index: 1000;
-  background-color: #0e0e0e;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   padding: 50px 0 150px;
-  color: #f2f2f2;
+  color: #0e0e0e;
 }
 #biography .bio-wrap h2 {
   min-width: 100%;
@@ -492,10 +503,9 @@ legend {
 }
 
 .indicators {
-  left: 2rem;
-  top: 0;
-  margin: 10vh 0;
-  height: 60vh;
+  left: 0;
+  top: 45%;
+  height: 10vh;
   width: 3px;
   display: none;
   flex-direction: column;
@@ -515,7 +525,6 @@ legend {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 4rem;
 }
 
 .philosophie .scr-tr-wrap {
@@ -524,18 +533,19 @@ legend {
 }
 
 .point article {
-  flex-basis: 60%;
-  margin-right: auto;
+  flex-basis: 30%;
+  margin: 0 auto;
 }
 .point article p {
+  margin-top: 25px;
   font-size: 23px;
   line-height: 1.3;
 }
 
 .point img {
-  flex-basis: 25%;
-  max-width: 25vw;
-  height: auto;
+  flex-basis: 50%;
+  width: 100%;
+  height: 80vh;
 }
 
 .award-wrap .awr-lst {
@@ -545,8 +555,16 @@ legend {
 .award-wrap .awr-l-lst {
   width: 50%;
 }
+.award-wrap .awr-l-lst video {
+  width: 96%;
+  margin: 7px auto;
+}
 .award-wrap .awr-r-lst {
   width: 50%;
+  padding-left: 17px;
+}
+.award-wrap .awr-r-lst .list-item {
+  justify-content: space-between;
 }
 
 .bio-others .bio-fl {
@@ -564,12 +582,20 @@ legend {
   flex-grow: 1;
 }
 
+.bio-l {
+  padding-left: 0;
+}
+
+.bio-r {
+  padding-right: 0;
+}
+
 .list-title {
   font-size: 26px;
   width: 100%;
   padding-bottom: 15px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid #0e0e0e;
 }
 
 .bdn {
@@ -595,7 +621,7 @@ legend {
   height: 70px;
   padding: 0 38px 12px;
   position: relative;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
