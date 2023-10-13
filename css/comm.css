@@ -261,6 +261,14 @@ legend {
   --lg: 1200px;
 }
 
+html {
+  cursor: none;
+}
+
+a {
+  cursor: none;
+}
+
 .sec-g {
   padding: 100px 0;
 }
@@ -633,6 +641,7 @@ legend {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  color: #000;
 }
 #footer .logo-bt {
   display: flex;
@@ -650,9 +659,6 @@ legend {
 #footer .footer-menu li:last-child {
   padding-right: 0;
 }
-#footer .footer-menu li a {
-  color: #f2f2f2;
-}
 #footer .footer-menu .menu-lang {
   position: relative;
   height: auto;
@@ -665,9 +671,27 @@ legend {
   width: 2px;
   height: 15px;
   margin: -2px 15px 0 0;
-  background: #f2f2f2;
+  background: #000;
   vertical-align: middle;
 }
 #footer .footer-menu .menu-lang .active-lang {
-  cursor: pointer;
+  cursor: none;
+}
+
+.custom-cursor {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 350ms ease;
+  transform: translate(-50%, -50%) scale(0.3);
+  z-index: 1000;
+}
+
+.custom-cursor--link {
+  transform: translate(-50%, -50%) scale(1);
 }/*# sourceMappingURL=comm.css.map */

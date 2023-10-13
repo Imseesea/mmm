@@ -11,7 +11,12 @@
 }
 
 $md: 768px;
-
+html {
+  cursor: none;
+}
+a {
+  cursor: none;
+}
 .sec-g {
   padding: 100px 0;
 }
@@ -434,6 +439,10 @@ $md: 768px;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
+  color: #000;
+  .copyright {
+    // color: #000;
+  }
   .logo-bt {
     display: flex;
     justify-content: center;
@@ -451,7 +460,7 @@ $md: 768px;
         padding-right: 0;
       }
       a {
-        color: #f2f2f2;
+        // color: black;
       }
     }
     .menu-lang {
@@ -465,13 +474,29 @@ $md: 768px;
         width: 2px;
         height: 15px;
         margin: -2px 15px 0 0;
-        background: #f2f2f2;
+        background: #000;
         vertical-align: middle;
       }
       .active-lang {
-        cursor: pointer;
+        cursor: none;
       }
       //
     }
   }
+}
+.custom-cursor {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 350ms ease;
+  transform: translate(-50%, -50%) scale(0.3);
+  z-index: 1000;
+}
+.custom-cursor--link {
+  transform: translate(-50%, -50%) scale(1);
 }
