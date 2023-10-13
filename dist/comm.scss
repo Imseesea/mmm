@@ -358,6 +358,14 @@ $md: 768px;
     padding-left: 17px;
     .list-item {
       justify-content: space-between;
+      .year {
+        min-width: 100px;
+      }
+      .text {
+        line-height: 1.5;
+        text-align: end;
+        word-break: keep-all;
+      }
     }
   }
 }

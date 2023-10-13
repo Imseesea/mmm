@@ -566,6 +566,14 @@ legend {
 .award-wrap .awr-r-lst .list-item {
   justify-content: space-between;
 }
+.award-wrap .awr-r-lst .list-item .year {
+  min-width: 100px;
+}
+.award-wrap .awr-r-lst .list-item .text {
+  line-height: 1.5;
+  text-align: end;
+  word-break: keep-all;
+}
 
 .bio-others .bio-fl {
   display: flex;

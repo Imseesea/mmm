@@ -55,7 +55,7 @@ var pinner = gsap.timeline({
     pin: ".philosophie .scr-tr-wrap",
     pinSpacing: true,
     id: "pinning",
-    markers: true,
+    markers: false,
   },
 });
 
