@@ -17,9 +17,9 @@ html {
 a {
   cursor: none;
 }
-.sec-g {
-  padding: 100px 0;
-}
+// .sec-g {
+//   padding-top: 100px;
+// }
 .inner {
   margin: 0 auto;
   width: 100%;
@@ -252,7 +252,7 @@ a {
   // background-color: #0e0e0e;
   display: flex;
   justify-content: center;
-  padding: 50px 0 150px;
+  padding: 70px 0;
   color: #0e0e0e;
   // color: #f2f2f2;
   .bio-wrap {
@@ -314,6 +314,7 @@ a {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   // padding: 4rem;
   // outline: 1px solid #f2f2f2;
 }
@@ -324,21 +325,26 @@ a {
 }
 
 .point article {
-  flex-basis: 30%;
+  // flex-basis: 30%;
   // margin-right: auto;
   // margin-left: auto;
-  margin: 0 auto;
+  // margin: 0 auto;
+  padding-left: 30px;
   p {
-    margin-top: 25px;
+    margin-top: 15px;
     font-size: 23px;
     line-height: 1.3;
+  }
+  h3 {
+    letter-spacing: -2px;
+    font-size: 44px;
   }
 }
 
 .point img {
-  flex-basis: 50%;
-  width: 100%;
-  height: 80vh;
+  // flex-basis: 50%;
+  // width: 100%;
+  height: 70vh;
   // max-width: 30vw;
   // flex-basis: 25%;
   // max-width: 25vw;
@@ -430,8 +436,102 @@ a {
     line-height: 1.3;
   }
 }
+.other3 {
+  display: flex;
+  .bio-lst {
+    margin-bottom: 0;
+  }
+}
+.sns-tr {
+  display: flex;
+  flex-direction: column;
+  h4 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+#other-cf {
+  position: relative;
+  height: 700px;
+  z-index: 1000;
+  background: #fff;
+  padding-top: 1px;
+}
+.container2 {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face {
+  position: absolute;
+  width: 250px;
+  height: 310px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  // box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+
+.carousel__face:nth-child(1) {
+  background-image: url(../images/cf-01.png);
+  transform: rotateY(0deg) translateZ(430px);
+}
+.carousel__face:nth-child(2) {
+  background-image: url(../images/cf-02.png);
+  transform: rotateY(40deg) translateZ(430px);
+}
+.carousel__face:nth-child(3) {
+  background-image: url(../images/cf-03.png);
+  transform: rotateY(80deg) translateZ(430px);
+}
+.carousel__face:nth-child(4) {
+  background-image: url(../images/cf-04.png);
+  transform: rotateY(120deg) translateZ(430px);
+}
+.carousel__face:nth-child(5) {
+  background-image: url(../images/cf-05.png);
+  transform: rotateY(160deg) translateZ(430px);
+}
+.carousel__face:nth-child(6) {
+  background-image: url(../images/cf-06.png);
+  transform: rotateY(200deg) translateZ(430px);
+}
+.carousel__face:nth-child(7) {
+  background-image: url(../images/cf-07.png);
+  transform: rotateY(240deg) translateZ(430px);
+}
+.carousel__face:nth-child(8) {
+  background-image: url(../images/cf-08.png);
+  transform: rotateY(280deg) translateZ(430px);
+}
+.carousel__face:nth-child(9) {
+  background-image: url(../images/cf-09.png);
+  transform: rotateY(320deg) translateZ(430px);
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
 
 #footer {
+  background: #fff;
   height: 70px;
   padding: 0 38px 12px;
   position: relative;
@@ -440,9 +540,9 @@ a {
   align-items: baseline;
   justify-content: space-between;
   color: #000;
-  .copyright {
-    // color: #000;
-  }
+  // .copyright {
+  //   color: #000;
+  // }
   .logo-bt {
     display: flex;
     justify-content: center;
@@ -459,9 +559,9 @@ a {
       &:last-child {
         padding-right: 0;
       }
-      a {
-        // color: black;
-      }
+      // a {
+      //   color: black;
+      // }
     }
     .menu-lang {
       position: relative;
@@ -484,6 +584,7 @@ a {
     }
   }
 }
+
 .custom-cursor {
   position: fixed;
   opacity: 0;
@@ -495,7 +596,7 @@ a {
   background-color: white;
   transition: transform 350ms ease;
   transform: translate(-50%, -50%) scale(0.3);
-  z-index: 1000;
+  z-index: 3000;
 }
 .custom-cursor--link {
   transform: translate(-50%, -50%) scale(1);

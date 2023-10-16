@@ -124,3 +124,5 @@ document.addEventListener("DOMContentLoaded", function (event) {
     initCursor = false;
   };
 });
+
+//cf-img
