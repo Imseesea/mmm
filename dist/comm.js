@@ -82,6 +82,7 @@ points.forEach(function (elem, i) {
 });
 
 // movie
+
 //cursor
 document.addEventListener("DOMContentLoaded", function (event) {
   var cursor = document.querySelector(".custom-cursor");

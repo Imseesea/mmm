@@ -433,6 +433,7 @@ a {
        columns: 2;
   -moz-column-gap: 40px;
        column-gap: 40px;
+  color: #0e0e0e;
 }
 
 .artist-content .section-intro {
